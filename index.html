@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productivity Buddy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+<header class="header">
+<div>
+                <p class="welcome">Welcome back 👋</p>
+                <h1>Productivity Buddy</h1>
+            </div>
+<div class="header-actions">
+<button id="refreshBtn" class="refresh-btn">
+                    🔄
+</button>
+<div class="profile">
+                    S
+                </div>
+
+            </div>
+</header>
+ <main id="homePage" class="page">
+<section class="progress-card">
+<div>
+
+                    <p>Today's Progress</p>
+
+                    <h2 id="progressText">
+                        0%
+                    </h2>
+ </div>
+<div class="progress-circle">
+
+                    <span id="progressNumber">
+                        0%
+                    </span>
+                </div>
+ </section>
+ <section class="task-section">
+
+                <div class="section-title">
+
+                    <h2>Today's Tasks</h2>
+
+                    <button id="addTaskBtn">
+                        +
+                    </button>
+
+                </div>
+
+                <div id="taskList">
+
+                    <div class="empty-message">
+                        No tasks yet. Add your first task!
+                    </div>
+
+                </div>
+
+            </section>
+<section class="stats">
+
+                <div class="stat-card">
+
+                    <span>Total Tasks</span>
+
+                    <strong id="totalTasks">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span>Completed</span>
+
+                    <strong id="completedTasks">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span>Pending</span>
+
+                    <strong id="pendingTasks">
+                        0
+                    </strong>
+
+                </div>
+
+            </section>
+
+        </main>
+        <main id="tasksPage" class="page hidden">
+
+            <section class="page-section">
+
+                <div class="section-title">
+
+                    <h2>Weekly Tasks</h2>
+
+                    <button id="addWeeklyTaskBtn">
+                        +
+                    </button>
+
+                </div>
+
+                <p class="page-description">
+                    Complete your tasks for this week.
+                </p>
+
+
+                <div id="weeklyTaskList">
+
+                </div>
+
+            </section>
+
+        </main>
+      <main id="goalsPage" class="page hidden">
+
+            <section class="page-section">
+
+                <div class="section-title">
+
+                    <h2>My Goals</h2>
+
+                    <button id="addGoalBtn">
+                        +
+                    </button>
+
+                </div>
+
+                <p class="page-description">
+                    Set goals and track what you achieve.
+                </p>
+
+
+                <div id="goalList">
+
+                </div>
+
+            </section>
+
+        </main>
+<main id="progressPage" class="page hidden">
+
+            <section class="page-section">
+
+                <h2>My Progress</h2>
+
+                <p class="page-description">
+                    See what you completed and what is still pending.
+                </p>
+
+
+                <div class="progress-summary">
+
+                    <div class="summary-card">
+
+                        <span>Today's Tasks</span>
+
+                        <strong id="todayProgressSummary">
+                            0%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-card">
+
+                        <span>Weekly Tasks</span>
+
+                        <strong id="weeklyProgressSummary">
+                            0%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-card">
+
+                        <span>Goals Achieved</span>
+
+                        <strong id="goalProgressSummary">
+                            0%
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="status-box">
+
+                    <h3>Current Status</h3>
+
+                    <p id="progressMessage">
+                        Start completing your tasks!
+                    </p>
+
+                </div>
+
+            </section>
+
+        </main>
+        <nav class="bottom-nav">
+
+            <button
+                class="nav-item active"
+                id="homeNav"
+            >
+
+                <span>🏠</span>
+
+                <small>Home</small>
+
+            </button>
+
+
+            <button
+                class="nav-item"
+                id="tasksNav"
+            >
+
+                <span>📋</span>
+
+                <small>Tasks</small>
+
+            </button>
+
+
+            <button
+                class="nav-item"
+                id="goalsNav"
+            >
+
+                <span>🎯</span>
+
+                <small>Goals</small>
+
+            </button>
+
+
+            <button
+                class="nav-item"
+                id="progressNav"
+            >
+
+                <span>📊</span>
+
+                <small>Progress</small>
+
+            </button>
+
+        </nav>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
