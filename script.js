@@ -1,13 +1,18 @@
+function loadData(key) {
+    try {
+        const data = localStorage.getItem(key);
 
-let tasks = JSON.parse(localStorage.getItem("productivityTasks")) || [];
+        return data ? JSON.parse(data) : [];
+    } catch (error) {
+        console.error("Error loading saved data:", error);
 
-let weeklyTasks =
-    JSON.parse(localStorage.getItem("weeklyTasks")) || [];
+        return [];
+    }
+}
 
-let goals =
-    JSON.parse(localStorage.getItem("productivityGoals")) || [];
-
-
+let tasks = loadData("productivityTasks");
+let weeklyTasks = loadData("weeklyTasks");
+let goals = loadData("productivityGoals");
 
 const homeNav = document.getElementById("homeNav");
 const tasksNav = document.getElementById("tasksNav");
@@ -152,7 +157,7 @@ tasksNav.addEventListener("click", function () {
 });
 
 
-// Goals
+
 goalsNav.addEventListener("click", function () {
 
     showPage(goalsPage);
